@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portpolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- header section start -->
+    <header>
+        <a href="#" class="logo">LOGO</a>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">features</a>
+            <a href="#about">about</a>
+            <a href="#usage">usage</a>
+            <a href="#review">review</a>
+            <a href="#pricing">pricing</a>
+            <a href="#contact">contact</a>
+        </nav>
+    </header>
+    <!-- header section end -->
+
+    <!-- home section start -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>app landing page</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus magni at id incidunt maxime quod minus velit quam, iste qui doloremque quia inventore laborum, sint veritatis aut voluptatem in voluptates.</p>
+            <a href="#" class="btn">get started</a>
+        </div>
+
+        <div class="swiper image-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/shot-01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/shot-02.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/shot-03.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/shot-04.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/shot-05.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home section end -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".image-slider", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+      },
+      loop:true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      }
+    });
+
+    let menu = document.querySelector('#menu-bar');
+    let navbar = document.querySelector('.navbar');
+
+    menu.addEventListener('click', function(){
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('nav-toggle');
+    });
+
+    window.onscroll = () => {
+        menu.classList.remove('fa-times');
+        navbar.classList.remove('nav-toggle');
+    }
+</script>
+</body>
+</html>
