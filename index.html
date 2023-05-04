@@ -59,39 +59,81 @@
     </section>
     <!-- home section end -->
 
+    <!-- features section start -->
+
+    <section id="features" class="features">
+        <h1 class="heading">app features</h1>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-magic"></i>
+                <h3>smooth design</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis eius ab aut a nesciunt facere natus dolorum ex est beatae?</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-shield-alt"></i>
+                <h3>privacy protect</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis eius ab aut a nesciunt facere natus dolorum ex est beatae?</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-globe"></i>
+                <h3>multiple language</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis eius ab aut a nesciunt facere natus dolorum ex est beatae?</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-map-marker-al"></i>
+                <h3>location tracking</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis eius ab aut a nesciunt facere natus dolorum ex est beatae?</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-cogs"></i>
+                <h3>powerfull settings</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis eius ab aut a nesciunt facere natus dolorum ex est beatae?</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-headset"></i>
+                <h3>24 x 7 service</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis eius ab aut a nesciunt facere natus dolorum ex est beatae?</p>
+            </div>
+        </div>        
+    </section>
+
+    <!-- features section end -->
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
-    var swiper = new Swiper(".image-slider", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 2,
-        slideShadows: true,
-      },
-      loop:true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      }
-    });
 
+    var swiper = new Swiper(".image-slider", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: true,
+        },
+        loop:true,
+        autoplay: {
+              delay: 2000,
+              disableOnInteraction: false,
+        },
+    });    
+    
     let menu = document.querySelector('#menu-bar');
     let navbar = document.querySelector('.navbar');
-
-    menu.addEventListener('click', function(){
+    
+    menu.addEventListener('click', () =>{
         menu.classList.toggle('fa-times');
         navbar.classList.toggle('nav-toggle');
     });
-
-    window.onscroll = () => {
+    
+    window.onscroll = () =>{
         menu.classList.remove('fa-times');
         navbar.classList.remove('nav-toggle');
     }
-</script>
+    
+    </script>
 </body>
 </html>
